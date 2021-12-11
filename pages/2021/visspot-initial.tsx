@@ -16,8 +16,8 @@ export default function VisspotInitial() {
           visualisation (including putting charts into presentation slides).
           These tasks are often performed manually, and are difficult to be
           reproduced the same way everytime. They are also usually performed
-          only once as they can be quite expensive and time-consuming. This has
-          led to a lack of missing potential insights such as:
+          only once as they can be quite expensive and time-consuming. This
+          usually leads to missing potential insights such as:
         </p>
         <div className="pl-6 flex flex-col gap-3 border-l border-black ml-2">
           <p>
