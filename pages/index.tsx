@@ -1,37 +1,33 @@
-import Head from 'next/head'
-import { AnimatingDots } from '../components/AnimatingDots';
-import { MultipleAnimatedText } from '../components/MultipleAnimatedText';
-
+import * as Separator from "@radix-ui/react-separator";
+import Head from "next/head";
+import Link from "next/link";
+import React from "react";
 
 export default function Home() {
   return (
-    <div className='bg-black text-white min-h-screen flex flex-col justify-start items-start'>
+    <div>
       <Head>
         <title>Ben Chomsang</title>
       </Head>
-      <Header></Header>
-      <Footer></Footer>
-    </div>
-  )
-}
-
-
-function Footer() {
-  return (<div className='w-full p-3 flex justify-between flex-wrap mx-auto max-w-6xl opacity-50'>
-    <div>By Ben Chomsang</div>
-    <a href='mailto:1994benc@gmail.com' className='border-b hover:border-blue-500 cursor-pointer'>1994benc@gmail.com</a>
-  </div>);
-}
-
-
-function Header() {
-  return (<div className='text-black py-10 w-full flex-1 flex flex-col justify-center items-start'>
-    <div className='text-4xl uppercase heading mx-auto max-w-6xl flex items-center px-3'>
-      <div className='flex flex-col items-start gap-5'>
-        <AnimatingDots></AnimatingDots>
-        <MultipleAnimatedText texts={['Research', 'Define', 'Refine', 'Build', 'Test']} />
-        <div className='text-white'>Applications everyone wants to use</div>
+      <div className="mx-auto max-w-3xl py-10 px-3 text-left">
+        <ul className="flex flex-col gap-8 px-3 text-2xl">
+          <li>
+            <Link href="/2021/visspot-initial">
+              <a className="navlink-r">
+                VisSpot - building a platform for automating continuous research
+                pipelines
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a className="navlink-l">
+                Hello world! This link takes you nowhere.
+              </a>
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>);
+  );
 }

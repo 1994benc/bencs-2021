@@ -1,15 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:ital,wght@0,100;1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;700&display=swap");
+
+* {
+  font-family: "Readex Pro", sans-serif;
+}
 
 .heading {
-    font-family: 'JetBrains Mono', monospace;
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.heading-2 {
+  font-weight: 900;
+  color: #000000;
+  font-size: 22px;
+  margin-top: 1rem;
 }
 
 .nav-list {
-    font-family: 'JetBrains Mono', monospace;
-    @apply flex  gap-10 my-3;
+  @apply flex gap-10 my-3;
 }
 
 .nav-list li {
-    @apply border-b border-dotted border-gray-500 hover:border-gray-100 cursor-pointer;
+  @apply border-b border-dotted border-gray-500 hover:border-gray-100 cursor-pointer;
+}
+
+.navlink-r {
+  @apply border-b hover:border-b-2 hover:border-r-2 hover:border-black px-1 border-r  rounded-sm;
+}
+
+.navlink-l {
+  @apply border-b hover:border-b-2 hover:border-l-2 hover:border-black px-1 border-l rounded-sm;
 }
