@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;700&display=swap");
 
+body {
+  @apply bg-white dark:bg-black dark:text-white;
+}
+
 * {
   font-family: "Readex Pro", sans-serif;
 }
@@ -11,7 +15,6 @@
 
 .heading-2 {
   font-weight: 900;
-  color: #000000;
   font-size: 22px;
   margin-top: 1rem;
 }
@@ -25,9 +28,9 @@
 }
 
 .navlink-r {
-  @apply border-b hover:border-b-2 hover:border-r-2 hover:border-black px-1 border-r  rounded-sm;
+  @apply border-b hover:border-b-2 hover:border-r-2 hover:border-black dark:hover:border-white px-1 border-r  rounded-sm;
 }
 
 .navlink-l {
-  @apply border-b hover:border-b-2 hover:border-l-2 hover:border-black px-1 border-l rounded-sm;
+  @apply border-b hover:border-b-2 hover:border-l-2 hover:border-black dark:hover:border-white px-1 border-l rounded-sm;
 }

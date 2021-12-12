@@ -8,20 +8,20 @@ export default function VisspotInitial() {
         Building VisSpot: Platform for Automating Continuous Research Pipelines
       </h1>
       <div className="flex gap-4 flex-col">
-        <h2 className="heading-2">The problem with traditional UX research</h2>
+        <h2 className="heading-2">The problem with traditional experimental research</h2>
         <p>
-          There are various ways to conduct UX research. They usually involve
+          UX experimental research methods usually involve
           intensive data collection, data processing, data analysis (including
           hypothesis testing using various statistical methods), and data
           visualisation (including putting charts into presentation slides).
           These tasks are often performed manually, and are difficult to be
           reproduced the same way everytime. They are also usually performed
-          only once as they can be quite expensive and time-consuming. This
-          usually leads to missing potential insights such as:
+          only once or twice as they can be quite expensive and time-consuming. This
+          usually leads to missing potential insights.
         </p>
-        <div className="pl-6 flex flex-col gap-3 border-l border-black ml-2">
+        <div className="pl-6 flex flex-col gap-3 border-l border-black dark:border-white ml-2">
           <p>
-            <b>Scenario:</b> We’ve just created a new button on our web page.
+            <b>Scenario:</b> We’ve just created a new Christmas themed button on our web page.
             And we expect people to click it more than the old button.
           </p>
           <p>
@@ -34,7 +34,7 @@ export default function VisspotInitial() {
             button.
           </p>
           <p>
-            <b>Traditional way to approach this:</b> collect usage data from the
+            <b>Traditional way to approach this:</b> We collect usage data from the
             two groups, clean the data, and perform a statistical analysis. We
             may also have to come up with a few data visualisations to present
             the research result to our stakeholders, or just to understand our
@@ -59,14 +59,15 @@ export default function VisspotInitial() {
         </h2>
         <p>
           By automating <b>continuous research pipelines</b>, making conducting
-          research easier, more efficient, and truely repeatable.
+          research easier, more efficient, and truely repeatable 🥳
         </p>
+        <p className="text-yellow-600 px-5 border-l border-yellow-400">Reruning an experiment should not require more than a button click.</p>
         <h3 className="text-xl">What's a research pipeline?</h3>
         <p>
           A research pipeline consists of multiple <b>steps</b>. In the mock-up
           below, steps are represented as columns, and they can contain multiple{" "}
-          <b>tasks</b>. For example, a data collection step contains a form for
-          data entry, a data processing and analysing step contains various
+          <b>tasks</b> that can be linked together. For example, a data collection step contains tasks that generate web forms for
+          data entry, a data processing step contains various
           software agents that will clean, process, and perform hypothesis
           testing for us, and a data visualisation step contains data
           visualisers can automatically create any charts we need.
@@ -75,16 +76,15 @@ export default function VisspotInitial() {
           <Image src={mockup.src} layout={"fill"} objectFit={"contain"} />
         </div>
         <p>
-          To put it simply, VisSpot allows users (who don't need to know
-          anything about programming) to create a way to continuously collect
+          To put it simply, VisSpot allows users to create a way to continuously collect
           data and pipe it into a series of data processing tasks, and a series
           of visualisation tasks. The results could be saved into any storage of
           choice (Google Drive, OneDrive, local file system, etc.)
         </p>
         <h2 className="heading-2">Set up once and run multiple times</h2>
         <p>
-          This research pipeline could be set up once and run multiple times.
-          That’s why we call it a “continuous research pipeline”. You can
+          VisSpot's research pipelines can be set up once and run multiple times.
+          That’s why we call them <b>continuous</b> research pipelines. You can
           schedule it to run based on any conditions you want. For example, you
           can ask your pipeline to run every Tuesday at 9AM, or every time we
           have 100 rows of data entered.
