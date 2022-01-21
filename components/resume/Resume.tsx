@@ -1,8 +1,8 @@
 import React from "react";
 import { ReactElement, useEffect } from "react";
 import { Character } from "./Character";
-import { LifeStage } from "./LifeStage";
-import { Stage } from "./Stage";
+import { ResumeItem } from "./ResumeItem";
+import { IResumeItem } from "./IResumeItem";
 const speed = 30;
 export const charactorWidth = 32;
 export const charactorHeight = 32;
@@ -11,10 +11,10 @@ const initialCharactorX = 0;
 
 export default function Resume() {
   const characterRef = React.useRef<HTMLDivElement>(null);
-  const [selectedStages, setSelectedStages] = React.useState<Stage[]>([]);
+  const [selectedItems, setSelectedItems] = React.useState<IResumeItem[]>([]);
   const [enableClick, setEnableClick] = React.useState<boolean>(false);
 
-  const stages: Stage[] = [
+  const items: IResumeItem[] = [
     {
       name: "📚 Education",
       id: "education",
@@ -62,12 +62,12 @@ export default function Resume() {
         characterRef.current.style.left.replace("px", "")
       );
 
-      for (const stage of stages) {
+      for (const item of items) {
         if (
-          currentLeft + charactorWidth >= stage.x &&
-          currentTop + charactorHeight >= stage.y
+          currentLeft + charactorWidth >= item.x &&
+          currentTop + charactorHeight >= item.y
         ) {
-          setSelectedStages((prev) => Array.from(new Set([...prev, stage])));
+          setSelectedItems((prev) => Array.from(new Set([...prev, item])));
         }
       }
 
@@ -119,7 +119,7 @@ export default function Resume() {
 
   function reset() {
     resetCharactorToInitialPositions();
-    setSelectedStages([])
+    setSelectedItems([])
     setEnableClick(false)
   }
 
@@ -169,27 +169,27 @@ export default function Resume() {
           <Character />
         </div>
 
-        {stages.map((stage) => {
+        {items.map((item) => {
           return (
             <div
-              key={stage.id}
+              key={item.id}
               className="absolute"
               style={{
-                left: stage.x,
-                top: stage.y,
+                left: item.x,
+                top: item.y,
               }}
               onClick={() => {
                 if (enableClick) {
-                  setSelectedStages(
-                    Array.from(new Set([...selectedStages, stage]))
+                  setSelectedItems(
+                    Array.from(new Set([...selectedItems, item]))
                   );
                 }
               }}
             >
-              <LifeStage
-                selectedStages={selectedStages}
-                name={stage.name}
-                id={stage.id}
+              <ResumeItem
+                selectedItems={selectedItems}
+                name={item.name}
+                id={item.id}
               />
             </div>
           );

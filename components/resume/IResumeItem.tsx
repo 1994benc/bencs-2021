@@ -1,5 +1,5 @@
 
-export interface Stage {
+export interface IResumeItem {
     x: number;
     y: number;
     name: string;

@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { Stage } from "./Stage";
+import { IResumeItem } from "./IResumeItem";
 
-export function LifeStage({
-    name, id, selectedStages,
+export function ResumeItem({
+    name, id, selectedItems,
 }: {
     name: string;
     id: string;
-    selectedStages: Stage[];
+    selectedItems: IResumeItem[];
 }) {
     const [selected, setSelected] = useState<boolean>(false);
 
     useEffect(() => {
-        console.log(selectedStages);
-        if (selectedStages.find((stage) => stage.id === id)) {
+        console.log(selectedItems);
+        if (selectedItems.find((stage) => stage.id === id)) {
             setSelected(true);
         } else {
             setSelected(false);
         }
-    }, [selectedStages]);
+    }, [selectedItems]);
 
     return (
         <div
