@@ -2,7 +2,10 @@ import React from "react";
 import { ReactElement, useEffect } from "react";
 import { Character } from "./Character";
 import { ResumeItem } from "./ResumeItem";
-import { IResumeItem } from "./IResumeItem";
+import { IResumeItem } from "../IResumeItem";
+import { useResumeItemsStore } from "../../../stores/useResumeItemsStore";
+import { useRouter } from "next/dist/client/router";
+import { resumeItems } from "../resumeItems";
 const speed = 30;
 export const charactorWidth = 32;
 export const charactorHeight = 32;
@@ -11,50 +14,20 @@ const initialCharactorX = 0;
 
 export default function Resume() {
   const characterRef = React.useRef<HTMLDivElement>(null);
-  const [selectedItems, setSelectedItems] = React.useState<IResumeItem[]>([]);
-  const [enableClick, setEnableClick] = React.useState<boolean>(false);
-
-  const items: IResumeItem[] = [
-    {
-      name: "📚 Education",
-      id: "education",
-      x: 50,
-      y: 100,
-    },
-    {
-      name: "💻 Work in Software Dev",
-      id: "work-dev",
-      x: 120,
-      y: 200,
-    },
-    {
-      name: "🧠 Work in Behavioural Data Science",
-      id: "work-data",
-      x: 600,
-      y: 260,
-    },
-    {
-      name: "🍳 Software Projects",
-      id: "dev-projects",
-      x: 350,
-      y: 350,
-    },
-    {
-      name: "🍳 What I'm good at",
-      id: "skills",
-      x: 120,
-      y: 450,
-    },
-    {
-      name: "💾 View & Download Resume",
-      id: "download-view",
-      x: 30,
-      y: 550,
-    },
-  ];
+  const setSelectedItems = useResumeItemsStore(
+    (state) => state.setSelectedItems
+  );
+  const addSelectedItem = useResumeItemsStore((state) => state.addSelectedItem);
+  const selectedItems = useResumeItemsStore((state) => state.selectedItems);
+  const [enableClick, setEnableClick] = React.useState<boolean>(true);
+  const router = useRouter();
 
   useEffect(() => {
+    let destroyed = false;
     const setUpCharactorMovement = (e: KeyboardEvent): void => {
+      if (destroyed) {
+        return;
+      }
       const currentTop = parseInt(
         characterRef.current.style.top.replace("px", "")
       );
@@ -62,12 +35,12 @@ export default function Resume() {
         characterRef.current.style.left.replace("px", "")
       );
 
-      for (const item of items) {
+      for (const item of resumeItems) {
         if (
           currentLeft + charactorWidth >= item.x &&
           currentTop + charactorHeight >= item.y
         ) {
-          setSelectedItems((prev) => Array.from(new Set([...prev, item])));
+          addResumeItemToState(item);
         }
       }
 
@@ -96,9 +69,17 @@ export default function Resume() {
     document.addEventListener("keydown", setUpCharactorMovement);
 
     return () => {
+      destroyed = true;
       document.removeEventListener("keydown", setUpCharactorMovement);
     };
   }, []);
+
+  const addResumeItemToState = (item: IResumeItem) => {
+    addSelectedItem(item);
+    if (item.id === "download-view") {
+      goToResumePage();
+    }
+  };
 
   function isElementInView(element: HTMLElement) {
     var rect = element.getBoundingClientRect();
@@ -119,20 +100,21 @@ export default function Resume() {
 
   function reset() {
     resetCharactorToInitialPositions();
-    setSelectedItems([])
-    setEnableClick(false)
+    setSelectedItems([]);
+    setEnableClick(true);
+  }
+
+  function goToResumePage() {
+    router.push("/resume");
   }
 
   return (
     <div>
       <div className="flex gap-3 items-center justify-start">
         <h2 className="text-3xl font-bold mx-2">
-          Build my resume interactively
+          Build my résumé interactively
         </h2>
-        <button
-          className="button-primary"
-          onClick={reset}
-        >
+        <button className="button-primary" onClick={reset}>
           Reset
         </button>
         <div className="flex gap-2 items-center">
@@ -147,8 +129,11 @@ export default function Resume() {
           />
           <label htmlFor="enableClick">Enable Click</label>
         </div>
-        <button className="button-primary">
-          View the pre-built resume instead
+        <button onClick={() => {
+          reset();
+          goToResumePage();
+        }} className="button-primary">
+          View the pre-built résumé instead
         </button>
       </div>
       <div className="description mx-2 my-3 dark:text-gray-400 text-gray-700">
@@ -169,7 +154,7 @@ export default function Resume() {
           <Character />
         </div>
 
-        {items.map((item) => {
+        {resumeItems.map((item) => {
           return (
             <div
               key={item.id}
@@ -180,9 +165,7 @@ export default function Resume() {
               }}
               onClick={() => {
                 if (enableClick) {
-                  setSelectedItems(
-                    Array.from(new Set([...selectedItems, item]))
-                  );
+                  addResumeItemToState(item);
                 }
               }}
             >

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { IResumeItem } from "./IResumeItem";
+import { IResumeItem } from "../IResumeItem";
 
 export function ResumeItem({
     name, id, selectedItems,
@@ -23,7 +23,7 @@ export function ResumeItem({
     return (
         <div
             id={id}
-            className={"w-96 h-12 rounded-lg bg-black text-white text-xl flex items-center justify-center transition-all ease-in-out duration-200" +
+            className={"w-96 h-12 cursor-pointer rounded-lg bg-black text-white text-xl flex items-center justify-center transition-all ease-in-out duration-200" +
                 (selected ? " active-stage" : "")}
         >
             {name}

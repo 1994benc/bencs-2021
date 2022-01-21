@@ -2,7 +2,7 @@ import * as Separator from "@radix-ui/react-separator";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import Resume from "../components/resume/Resume";
+import Resume from "../components/resume/build-resume-game/Resume";
 
 export default function Home() {
   return (
