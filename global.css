@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;700&display=swap");
 
 body {
-  @apply bg-white dark:bg-black dark:text-white;
+  @apply bg-white dark:bg-ben-verydark dark:text-white;
 }
 
 * {
@@ -33,4 +33,13 @@ body {
 
 .navlink-l {
   @apply border-b hover:border-b-2 hover:border-l-2 hover:border-black dark:hover:border-white px-1 border-l rounded-sm;
+}
+
+.active-stage {
+  @apply border-2 scale-125;
+  background-color: rgb(30, 172, 30) !important;
+}
+
+.button-primary {
+  @apply bg-black hover:bg-black dark:bg-white dark:text-black text-white cursor-pointer rounded-lg px-3 py-2;
 }

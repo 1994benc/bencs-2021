@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { MoonIcon } from "./MoonIcon";
-import { SunIcon } from "./SunIcon";
+import { MoonIcon } from "../icons/MoonIcon";
+import { SunIcon } from "../icons/SunIcon";
 
 export const NavBar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -34,7 +34,7 @@ export const NavBar = () => {
     }
   };
   return (
-    <div className="mx-auto sticky mt-10 max-w-3xl py-3 px-5 bg-black dark:bg-gray-900 text-white rounded flex justify-between items-center">
+    <div className="mx-auto sticky top-0 z-50 mt-10 max-w-6xl py-3 px-5 bg-black text-white rounded flex justify-between items-center shadow">
       <Link href="/">
         <a className="font-bold hover:text-yellow-300">Ben Chomsang 👋</a>
       </Link>
