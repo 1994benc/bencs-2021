@@ -18,9 +18,9 @@ export const resumeItems: IResumeItem[] = [
         ],
       },
       {
-        title: "Undergraduate from the University of Rochester, Rochester, NY",
+        title: "Undergraduate from the University of Rochester",
         when: "Sep 2014 - May 2018",
-        where: "Rochester, NY",
+        where: "Rochester, NY, USA",
         description:
           "Double Major in Psychology and Film & Media with a cluster in Computer Science",
         outputs: [
