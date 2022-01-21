@@ -1,6 +1,7 @@
 export interface IResumeBodyItem {
     title: string;
     when?: string;
+    where?: string;
     description?: string;
     outputs?: string[];
     link?: string;

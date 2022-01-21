@@ -12,12 +12,15 @@ export function ResumeItemComponentForResumePage({
       <h2 className="text-3xl font-bold my-2">{item.name}</h2>
       {item.body &&
         item.body.map((bodyItem, index) => (
-          <div key={index} className="my-6">
+          <div key={index} className="my-10">
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-bold">{bodyItem.title}</h3>
-              <p className="text-sm">{bodyItem.when}</p>
+              <div>
+                <div className="text-sm">🗓 {bodyItem.when}</div>
+                {bodyItem.where && <div className="text-sm">📍 {bodyItem.where}</div>}
+              </div>
             </div>
-            {bodyItem?.link && (
+            {bodyItem.link && (
               <a
                 href={bodyItem.link}
                 target="_blank"

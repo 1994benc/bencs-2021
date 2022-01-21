@@ -9,6 +9,7 @@ export const resumeItems: IResumeItem[] = [
     body: [
       {
         title: "Master of Science from the University of Warwick",
+        where: "Coventry, UK",
         when: "Sep 2019 - Aug 2020",
         description: "MSc in Behavioural and Data Science",
         outputs: [
@@ -19,6 +20,7 @@ export const resumeItems: IResumeItem[] = [
       {
         title: "Undergraduate from the University of Rochester, Rochester, NY",
         when: "Sep 2014 - May 2018",
+        where: "Rochester, NY",
         description:
           "Double Major in Psychology and Film & Media with a cluster in Computer Science",
         outputs: [
@@ -35,10 +37,11 @@ export const resumeItems: IResumeItem[] = [
     y: 200,
     body: [
       {
-        title: "Full-stack Software Engineer at Cedus (London, UK)",
+        title: "Full-Stack Software Engineer",
         when: "Nov 2020 - Nov 2021",
+        where: "London, UK",
         description:
-          "Worked on a small team of developers to build a web application for clients in the financial services industry",
+          "Worked remotely on a small team of developers to build a web application for clients in the financial services industry",
         outputs: [
           "This experience taught me how to write 'clean' code that is easy to understand and maintain",
           "This experience taught me about agile development workflows",
@@ -48,8 +51,9 @@ export const resumeItems: IResumeItem[] = [
       },
       {
         title:
-          "Public Health Officer & Software Developer at the Department of Mental Health, Gov. of Thailand",
+          "Public Health Officer & Software Developer at the Department of Mental Health, Government of Thailand",
         when: "Aug 2018 - Aug 2019",
+        where: "Bangkok, Thailand",
         description: "Full-stack development of internal web applications",
         outputs: [
           "Initiated new web application projects from scratch",
@@ -59,6 +63,7 @@ export const resumeItems: IResumeItem[] = [
       },
       {
         title: "Part-time Teaching Assistant at the University of Rochester",
+        where: "Rochester, NY",
         when: "Jan 2018 - May 2018",
         description: "CSC 174: Advanced front-end web development",
         outputs: [
