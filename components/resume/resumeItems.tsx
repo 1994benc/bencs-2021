@@ -160,7 +160,7 @@ export const resumeItems: IResumeItem[] = [
     ],
   },
   {
-    name: "💾 View & Download Résumé",
+    name: "💾 View my Résumé",
     id: "download-view",
     x: 30,
     y: 550,
