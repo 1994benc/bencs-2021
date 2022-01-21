@@ -31,17 +31,16 @@ export default function ResumePage() {
             ></ResumeItemComponentForResumePage>
           ))}
         </div>
-
-        <div className="flex my-6">
-          <button
-            onClick={() => {
-              router.back();
-            }}
-            className="button-primary"
-          >
-            Back
-          </button>
-        </div>
+      </div>
+      <div className="flex fixed px-16 py-6 border-t bottom-0 w-full bg-white dark:bg-ben-verydark dark:border-ben-dark left-0">
+        <button
+          onClick={() => {
+            router.back();
+          }}
+          className="button-primary"
+        >
+          Back
+        </button>
       </div>
     </div>
   );
