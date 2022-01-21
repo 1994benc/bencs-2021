@@ -22,7 +22,7 @@ export default function ResumePage() {
       <Head>
         <title>Ben's Résumé</title>
       </Head>
-      <div className="mx-auto max-w-5xl py-10 px-3 text-left flex flex-col gap-3">
+      <div className="mx-auto max-w-5xl py-10 px-3 mb-20 text-left flex flex-col gap-3">
         <div className="flex flex-col gap-6">
           {itemsToRender.map((item) => (
             <ResumeItemComponentForResumePage

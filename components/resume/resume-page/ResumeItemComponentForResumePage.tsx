@@ -8,13 +8,13 @@ export function ResumeItemComponentForResumePage({
   item: IResumeItem;
 }) {
   return (
-    <div className="border dark:border-ben-dark  py-3 px-6 rounded-lg">
-      <h2 className="text-2xl font-bold my-2">{item.name}</h2>
+    <div className="border dark:border-ben-dark  py-3 px-6  rounded-lg">
+      <h2 className="text-3xl font-bold my-2">{item.name}</h2>
       {item.body &&
         item.body.map((bodyItem, index) => (
           <div key={index} className="my-6">
             <div className="flex justify-between items-center">
-              <h3 className="text-lg font-bold">{bodyItem.title}</h3>
+              <h3 className="text-xl font-bold">{bodyItem.title}</h3>
               <p className="text-sm">{bodyItem.when}</p>
             </div>
             {bodyItem?.link && (
@@ -25,14 +25,14 @@ export function ResumeItemComponentForResumePage({
                     className="text-sm text-blue-500 hover:underline"
                 >{bodyItem.link}</a>
             )}
-            {bodyItem?.description && <div className="text-sm my-2 flex gap-1 items-center">
+            {bodyItem?.description && <div className="text-lg my-2 flex gap-1 items-center">
               <InfoIcon />
               <span>{bodyItem.description}</span>
             </div>}
             <div className="outputs my-2 dark:text-gray-400 text-gray-600">
               {bodyItem.outputs &&
                 bodyItem.outputs.map((output, index) => (
-                  <div key={index} className="text-sm flex items-start gap-2">
+                  <div key={index} className=" flex leading-7 items-start gap-2">
                     <div className="text-green-500">
                       <CheckIcon />
                     </div>{" "}
