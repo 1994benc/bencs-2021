@@ -23,7 +23,7 @@ export function ResumeItem({
     return (
         <div
             id={id}
-            className={"w-96 h-12 cursor-pointer rounded-lg bg-black text-white text-xl flex items-center justify-center transition-all ease-in-out duration-200" +
+            className={" cursor-pointer py-2 px-3 rounded-lg bg-black text-white text-xl flex items-center justify-center transition-all ease-in-out duration-200" +
                 (selected ? " active-stage" : "")}
         >
             {name}

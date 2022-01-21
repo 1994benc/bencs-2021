@@ -18,21 +18,30 @@ export function ResumeItemComponentForResumePage({
               <p className="text-sm">{bodyItem.when}</p>
             </div>
             {bodyItem?.link && (
-                <a
-                    href={bodyItem.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-blue-500 hover:underline"
-                >{bodyItem.link}</a>
+              <a
+                href={bodyItem.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-blue-500 hover:underline"
+              >
+                {bodyItem.link}
+              </a>
             )}
-            {bodyItem?.description && <div className="text-lg my-2 flex gap-1 items-center">
-              <span><InfoIcon /></span>
-              <span>{bodyItem.description}</span>
-            </div>}
+            {bodyItem?.description && (
+              <div className="text-lg my-2 flex gap-1 items-center">
+                <span>
+                  <InfoIcon />
+                </span>
+                <span>{bodyItem.description}</span>
+              </div>
+            )}
             <div className="outputs my-2 dark:text-gray-400 text-gray-600">
               {bodyItem.outputs &&
                 bodyItem.outputs.map((output, index) => (
-                  <div key={index} className=" flex leading-7 items-start gap-2">
+                  <div
+                    key={index}
+                    className=" flex leading-7 items-start gap-2"
+                  >
                     <div className="text-green-500">
                       <CheckIcon />
                     </div>{" "}

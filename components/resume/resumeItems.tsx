@@ -29,7 +29,7 @@ export const resumeItems: IResumeItem[] = [
     ],
   },
   {
-    name: "💻 Work in Software Dev",
+    name: "💻 Professional Experience in Software Engineering",
     id: "work-dev",
     x: 120,
     y: 200,
@@ -50,7 +50,7 @@ export const resumeItems: IResumeItem[] = [
         title:
           "Public Health Officer & Software Developer at the Department of Mental Health, Gov. of Thailand",
         when: "Aug 2018 - Aug 2019",
-        description: "Full-stack development of in-housed web applications",
+        description: "Full-stack development of internal web applications",
         outputs: [
           "Initiated new web application projects from scratch",
           "This experience taught me how to communicate requirements and outcomes with non-technical stakeholders",
@@ -68,7 +68,7 @@ export const resumeItems: IResumeItem[] = [
     ],
   },
   {
-    name: "🧠 Work in Behavioural Data Science",
+    name: "🧠 Professional Experience in Behavioural Data Science",
     id: "work-data",
     x: 600,
     y: 260,
