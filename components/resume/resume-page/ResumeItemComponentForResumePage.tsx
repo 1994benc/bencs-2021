@@ -26,7 +26,7 @@ export function ResumeItemComponentForResumePage({
                 >{bodyItem.link}</a>
             )}
             {bodyItem?.description && <div className="text-lg my-2 flex gap-1 items-center">
-              <InfoIcon />
+              <span><InfoIcon /></span>
               <span>{bodyItem.description}</span>
             </div>}
             <div className="outputs my-2 dark:text-gray-400 text-gray-600">
