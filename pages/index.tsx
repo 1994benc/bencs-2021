@@ -12,14 +12,6 @@ export default function Home() {
       <div className="mx-auto max-w-3xl py-10 px-3 text-left">
         <ul className="flex flex-col gap-8 px-3 text-2xl">
           <li>
-            <Link href="/2021/visspot-initial">
-              <a className="navlink-r">
-                VisSpot - building a platform for automating continuous research
-                pipelines
-              </a>
-            </Link>
-          </li>
-          <li>
             <Link href="/">
               <a className="navlink-l">
                 Hello world! This link takes you nowhere.
