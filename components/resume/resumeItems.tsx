@@ -63,7 +63,7 @@ export const resumeItems: IResumeItem[] = [
       },
       {
         title: "Part-time Teaching Assistant at the University of Rochester",
-        where: "Rochester, NY",
+        where: "Rochester, NY, USA",
         when: "Jan 2018 - May 2018",
         description: "CSC 174: Advanced front-end web development",
         outputs: [
@@ -79,8 +79,9 @@ export const resumeItems: IResumeItem[] = [
     y: 260,
     body: [
       {
-        title: "Behavioural Data Scientist at Cowry (London, UK)",
+        title: "Behavioural Data Scientist at Cowry",
         when: "Nov 2021 - Present",
+        where: "London, UK",
         description:
           "Use data science to gain behavioural insights and build Cowry's unique database of commercial work, the Behavioural Fingerprint",
         outputs: [
@@ -159,7 +160,8 @@ export const resumeItems: IResumeItem[] = [
       },
       {
         title: "Video production",
-        description: "Includes Digital Video Production, Photography, and Editing",
+        description:
+          "Includes Digital Video Production, Photography, and Editing",
         outputs: ["I can produce and edit videos for a variety of projects"],
       },
     ],
