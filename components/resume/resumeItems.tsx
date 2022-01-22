@@ -14,7 +14,7 @@ export const resumeItems: IResumeItem[] = [
         description: "MSc in Behavioural and Data Science",
         outputs: [
           "Graduated with distinction",
-          "Dissertation project: Use machine learning (sentiment analysis and topic modelling) to understand the brain of Vincent Van Gogh",
+          "Dissertation project: Use machine learning (sentiment analysis and topic modelling) to understand the brain of Vincent Van Gogh through his letters and paintings",
         ],
       },
       {
