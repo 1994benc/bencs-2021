@@ -3,7 +3,7 @@ export interface IResumeBodyItem {
     when?: string;
     where?: string;
     description?: string;
-    outputs?: string[];
+    detailList?: string[];
     link?: string;
     logo?: string;
 }
@@ -12,5 +12,5 @@ export interface IResumeItem {
   y: number;
   name: string;
   id: string;
-  body?: IResumeBodyItem[];
+  items?: IResumeBodyItem[];
 }

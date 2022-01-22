@@ -6,13 +6,13 @@ export const resumeItems: IResumeItem[] = [
     id: "education",
     x: 250,
     y: 100,
-    body: [
+    items: [
       {
         title: "Master of Science from the University of Warwick",
         where: "Coventry, UK",
         when: "Sep 2019 - Aug 2020",
         description: "MSc in Behavioural and Data Science",
-        outputs: [
+        detailList: [
           "Graduated with distinction",
           "Dissertation project: Use machine learning (sentiment analysis and topic modelling) to understand the brain of Vincent Van Gogh through his letters and paintings",
         ],
@@ -23,7 +23,7 @@ export const resumeItems: IResumeItem[] = [
         where: "Rochester, NY, USA",
         description:
           "Double Major in Psychology and Film & Media with a cluster in Computer Science",
-        outputs: [
+        detailList: [
           "President of the Undergraduate Film Council & Personnel Director of the Cinema Group",
           "Courses taken include Advanced Front-end Web Development, Android Development, Introduction to the Arts of Programming (Python), Database Systems, Psychology of Consumerism",
         ],
@@ -35,14 +35,14 @@ export const resumeItems: IResumeItem[] = [
     id: "work-dev",
     x: 120,
     y: 200,
-    body: [
+    items: [
       {
         title: "Full-Stack Software Engineer",
         when: "Nov 2020 - Nov 2021",
         where: "London, UK",
         description:
           "Worked remotely on a small team of developers to build a web application for clients in the financial services industry",
-        outputs: [
+        detailList: [
           "This experience taught me how to write 'clean' code that is easy to understand and maintain",
           "This experience taught me about agile development workflows",
           "This experience taught me about the importance of Test Driven Development and Continuous Integration",
@@ -55,7 +55,7 @@ export const resumeItems: IResumeItem[] = [
         when: "Aug 2018 - Aug 2019",
         where: "Bangkok, Thailand",
         description: "Full-stack development of internal web applications",
-        outputs: [
+        detailList: [
           "Initiated new web application projects from scratch",
           "This experience taught me how to communicate requirements and outcomes with non-technical stakeholders",
           "This experience strengthened my HTML, CSS, JavaScript (React), PHP, & NodeJS skills",
@@ -66,7 +66,7 @@ export const resumeItems: IResumeItem[] = [
         where: "Rochester, NY, USA",
         when: "Jan 2018 - May 2018",
         description: "CSC 174: Advanced front-end web development",
-        outputs: [
+        detailList: [
           "This experience strengthened my HTML, CSS, Plain JavaScript, & PHP skills",
         ],
       },
@@ -77,14 +77,14 @@ export const resumeItems: IResumeItem[] = [
     id: "work-data",
     x: 600,
     y: 260,
-    body: [
+    items: [
       {
         title: "Behavioural Data Scientist at Cowry",
         when: "Nov 2021 - Present",
         where: "London, UK",
         description:
           "Use data science to gain behavioural insights and build Cowry's unique database of commercial work, the Behavioural Fingerprint",
-        outputs: [
+        detailList: [
           "This experience taught me about various behavioural data science techniques",
           "This experience taught me about various behavioural experimental design techniques",
           "This experience taught me about how to initiate and manage a new data science project",
@@ -97,14 +97,14 @@ export const resumeItems: IResumeItem[] = [
     id: "dev-projects",
     x: 350,
     y: 350,
-    body: [
+    items: [
       {
         link: "https://www.npmjs.com/package/fully-linked",
         title: "FullyLinked",
         when: "Nov 2020 - Present",
         description:
           "A JavaScript library written in TypeScript for building directed acyclic graphs using HTML elements",
-        outputs: [
+        detailList: [
           "This experience has taught me how to publish my own open-source projects to NPM",
           "This experience has taught me how to maintain an open-source project",
         ],
@@ -114,7 +114,7 @@ export const resumeItems: IResumeItem[] = [
         when: "Nov 2020 - Present",
         description:
           "A web application for building automated research pipelines using Directed Acyclic Graphs (DAGs)",
-        outputs: [
+        detailList: [
           "This project has taught me how to build a server-side rendered (SSR) single-page web application use TypeScript (NextJS), Go, Docker, and Google Cloud Platform",
           "This project has led to the development of FullyLinked, a JavaScript library for building directed acyclic graphs using HTML elements",
         ],
@@ -124,7 +124,7 @@ export const resumeItems: IResumeItem[] = [
         when: "Jan 2020 - Dec 2020",
         description:
           "A website for visualising data without writing a single line of code",
-        outputs: [
+        detailList: [
           "This experience stregthened my JavaScript (React), HTML, CSS skills",
           "This experience introduced me to Google Cloud Platform, which massively reduced my development time",
           "This experience strengthened my UX design skills",
@@ -137,12 +137,12 @@ export const resumeItems: IResumeItem[] = [
     id: "skills",
     x: 120,
     y: 450,
-    body: [
+    items: [
       {
         title: "Full-Stack Web Development",
         description:
           "Using React, NextJS, Jest, React Testing Library, NodeJS, HTML, CSS, Docker, Google Cloud Platform",
-        outputs: [
+        detailList: [
           "2 years building web applications for a company and a government organisation",
           "5+ years building personal web applications",
           "I value maintainability, testability, and scalability",
@@ -152,7 +152,7 @@ export const resumeItems: IResumeItem[] = [
       {
         title: "Behavioural Data Science and Data Engineering",
         description: "Using Python, R, SQL, Google Cloud Platform",
-        outputs: [
+        detailList: [
           "I can use machine learning to gain behavioural insights",
           "I can start and manage a data science project from scratch",
           "I can communicate requirements and outcomes with non-technical stakeholders",
@@ -162,7 +162,7 @@ export const resumeItems: IResumeItem[] = [
         title: "Video production",
         description:
           "Includes Digital Video Production, Photography, and Editing",
-        outputs: ["I can produce and edit videos for a variety of projects"],
+        detailList: ["I can produce and edit videos for a variety of projects"],
       },
     ],
   },

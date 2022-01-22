@@ -12,7 +12,6 @@ export function ResumeItem({
     const [selected, setSelected] = useState<boolean>(false);
 
     useEffect(() => {
-        console.log(selectedItems);
         if (selectedItems.find((stage) => stage.id === id)) {
             setSelected(true);
         } else {

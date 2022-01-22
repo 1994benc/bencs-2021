@@ -15,7 +15,6 @@ export default function ResumePage() {
   if (!itemsToRender.length) {
     itemsToRender = resumeItems.filter((item) => item.id !== "download-view");
   }
-  console.log(itemsToRender);
 
   return (
     <div>

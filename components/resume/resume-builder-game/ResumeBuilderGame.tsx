@@ -12,7 +12,7 @@ export const charactorHeight = 32;
 const initialCharactorY = 40;
 const initialCharactorX = 0;
 
-export default function Resume() {
+export default function ResumeBuilderGame() {
   const characterRef = React.useRef<HTMLDivElement>(null);
   const setSelectedItems = useResumeItemsStore(
     (state) => state.setSelectedItems

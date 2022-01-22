@@ -1,5 +1,5 @@
 import React from "react";
-import { charactorWidth, charactorHeight } from "./Resume";
+import { charactorWidth, charactorHeight } from "./ResumeBuilderGame";
 
 export function Character() {
     return (

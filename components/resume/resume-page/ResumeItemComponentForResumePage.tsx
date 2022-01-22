@@ -10,13 +10,13 @@ export function ResumeItemComponentForResumePage({
   return (
     <div className="border dark:border-ben-dark  py-3 px-6  rounded-lg">
       <h2 className="text-3xl font-bold my-2">{item.name}</h2>
-      {item.body &&
-        item.body.map((bodyItem, index) => (
+      {item.items &&
+        item.items.map((bodyItem, index) => (
           <div key={index} className="my-10">
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-bold">{bodyItem.title}</h3>
               <div>
-                <div className="text-sm">🗓 {bodyItem.when}</div>
+                {bodyItem.when && <div className="text-sm">🗓 {bodyItem.when}</div>}
                 {bodyItem.where && <div className="text-sm">📍 {bodyItem.where}</div>}
               </div>
             </div>
@@ -39,8 +39,8 @@ export function ResumeItemComponentForResumePage({
               </div>
             )}
             <div className="outputs my-2 dark:text-gray-400 text-gray-600">
-              {bodyItem.outputs &&
-                bodyItem.outputs.map((output, index) => (
+              {bodyItem.detailList &&
+                bodyItem.detailList.map((output, index) => (
                   <div
                     key={index}
                     className=" flex leading-7 items-start gap-2"
