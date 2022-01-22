@@ -6,6 +6,7 @@ import { IResumeItem } from "../IResumeItem";
 import { useResumeItemsStore } from "../../../stores/useResumeItemsStore";
 import { useRouter } from "next/dist/client/router";
 import { resumeItems } from "../resumeItems";
+import Link from "next/link";
 const speed = 30;
 export const charactorWidth = 32;
 export const charactorHeight = 32;
@@ -129,12 +130,13 @@ export default function ResumeBuilderGame() {
           />
           <label htmlFor="enableClick">Enable Click</label>
         </div>
-        <button onClick={() => {
-          reset();
-          goToResumePage();
-        }} className="button-primary">
-          View the pre-built résumé instead
-        </button>
+        <Link href={"/resume"}>
+          <a>
+            <button className="button-primary">
+              View the pre-built résumé instead
+            </button>
+          </a>
+        </Link>
       </div>
       <div className="description mx-2 my-3 dark:text-gray-400 text-gray-700">
         Use arrow keys (⬅️ ➡️ ⬆️ ⬇️) to move the hand (🖐) around and collect
