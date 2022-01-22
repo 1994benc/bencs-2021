@@ -141,7 +141,7 @@ export default function Resume() {
         resume items.
       </div>
 
-      <div className="w-full h-screen bg-transparent rounded-lg relative">
+      <div className="w-full h-96 bg-transparent rounded-lg relative">
         <div
           className="absolute animate-bounce transition-all duration-200 ease-in-out"
           style={{
