@@ -112,6 +112,7 @@ export const resumeItems: IResumeItem[] = [
       {
         title: "Turboflow",
         when: "Nov 2020 - Present",
+        link: "https://turboflow.vercel.app/",
         description:
           "A web application for building automated research pipelines using Directed Acyclic Graphs (DAGs)",
         detailList: [
