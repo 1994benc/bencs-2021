@@ -3,6 +3,7 @@ import React from "react";
 import ResumeBuilderGame from "../components/resume/resume-builder-game/ResumeBuilderGame";
 import copy from "copy-to-clipboard";
 import { Toaster, toast } from "react-hot-toast";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,8 +20,8 @@ export default function Home() {
         </div>
         <div className="md:hidden visible border dark:border-ben-dark p-10 rounded-lg ">
           <div className="flex flex-col gap-4">
-            <div className="text-2xl mx-1 leading-snug">
-              ⚠️ The Resume Builder is only available on a larger screen device
+            <div className="text-2xl mx-1 leading-snug mb-2">
+              ⚠️ The Résumé Builder is only available on a larger screen device
             </div>
             <button
               onClick={() => {
@@ -31,6 +32,9 @@ export default function Home() {
             >
               🔗 Copy link
             </button>
+            <Link href="/resume">
+              <button className="button-primary">📄 View the full résumé</button>
+            </Link>
           </div>
         </div>
         {/* <DraggableResumeBuilder /> */}

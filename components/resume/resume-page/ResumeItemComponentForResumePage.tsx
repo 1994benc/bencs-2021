@@ -13,7 +13,7 @@ export function ResumeItemComponentForResumePage({
       {item.items &&
         item.items.map((bodyItem, index) => (
           <div key={index} className="my-10">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col gap-2 mb-2 md:flex-row md:justify-between md:items-center">
               <h3 className="text-xl font-bold">{bodyItem.title}</h3>
               <div>
                 {bodyItem.when && <div className="text-sm">🗓 {bodyItem.when}</div>}
