@@ -33,7 +33,7 @@ export default function Home() {
               🔗 Copy link
             </button>
             <Link href="/resume">
-              <button className="button-primary">📄 View the full résumé</button>
+              <a><button className="button-primary">📄 View the full résumé</button></a>
             </Link>
           </div>
         </div>
