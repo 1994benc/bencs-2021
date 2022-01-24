@@ -101,7 +101,7 @@ export const resumeItems: IResumeItem[] = [
       {
         link: "https://www.npmjs.com/package/fully-linked",
         title: "FullyLinked",
-        when: "Nov 2020 - Present",
+        when: "Nov 2021 - Present",
         description:
           "A JavaScript library written in TypeScript for building directed acyclic graphs using HTML elements",
         detailList: [
@@ -111,7 +111,7 @@ export const resumeItems: IResumeItem[] = [
       },
       {
         title: "Turboflow",
-        when: "Nov 2020 - Present",
+        when: "Nov 2021 - Present",
         link: "https://turboflow.vercel.app/",
         description:
           "A web application for building automated research pipelines using Directed Acyclic Graphs (DAGs)",
